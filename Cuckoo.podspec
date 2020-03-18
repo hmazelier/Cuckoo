@@ -26,12 +26,12 @@ Pod::Spec.new do |s|
                                     curl -Lo #{generator_name} https://github.com/Brightify/Cuckoo/releases/download/#{s.version}/#{generator_name}
                                     chmod +x #{generator_name}
                                 CMD
-  s.frameworks                  = 'XCTest', 'Foundation'
+  s.frameworks                  = 'Foundation'
   s.requires_arc                = true
   s.pod_target_xcconfig         = {
     'ENABLE_BITCODE' => 'NO',
     'SWIFT_REFLECTION_METADATA_LEVEL' => 'none',
-    'OTHER_LDFLAGS' => '$(inherited) -weak-lswiftXCTest',
+    'OTHER_LDFLAGS' => '$(inherited)',
   }
   s.default_subspec             = 'Swift'
 
